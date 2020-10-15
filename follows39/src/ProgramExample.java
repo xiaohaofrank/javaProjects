@@ -177,7 +177,7 @@ public class ProgramExample {
         }
     }
     /*
-    * 计算1-100之间所有整数之和，5050
+    * 计算1-100之间所有整数之和，5050。哦哦。
     * */
     @Test
     public void testFn10(){
