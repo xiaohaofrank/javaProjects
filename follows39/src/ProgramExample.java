@@ -189,7 +189,7 @@ public class ProgramExample {
         System.out.println(sum);
     }
    /*
-   计算10的阶乘。.。
+   计算10的阶乘。.。。
    */
     @Test
     public void testFn11(){
