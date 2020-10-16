@@ -1,5 +1,6 @@
 import org.junit.Test;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class ProgramExample {
@@ -38,6 +39,10 @@ public class ProgramExample {
         d = r;
         r = temp;
         System.out.println("第一个数" + d + "第二个数" + r);
+
+        //
+        Date date = new Date();
+        System.out.println(date);
     }
 
     //@Test注解，点灯的第二个
