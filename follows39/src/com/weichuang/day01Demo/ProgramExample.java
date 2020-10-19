@@ -1,3 +1,5 @@
+package com.weichuang.day01Demo;
+
 import org.junit.Test;
 
 import java.util.Date;
@@ -209,4 +211,27 @@ public class ProgramExample {
         }
         System.out.println(mul);
     }
+    /*逆序输出10到0*/
+    @Test
+    public void TestFn12(){
+
+    }
+    /*java阶乘求和*/
+    @Test
+    public void TestFn13(){
+
+    }
+    /*
+    * for循环
+    * */
+    @Test
+    public void TestFn14(){
+        for(int i=0;i<=4;i++){
+            System.out.println(i);
+        }
+    }
+    /*
+     * for循环练习TestFn15~TestFn20
+     * */
+
 }
