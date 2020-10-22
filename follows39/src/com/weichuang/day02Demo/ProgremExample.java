@@ -2,6 +2,8 @@ package com.weichuang.day02Demo;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class ProgremExample {
     private int b;
 
@@ -114,6 +116,81 @@ public class ProgremExample {
                 return true;
         }
         return false;
+    }
+   /*
+   多维数组
+   三个班级各三名学员参赛
+   记录每个学员的成绩，计算每个班的平均分
+    */
+    @Test
+    public void testFn6(){
+        int[][] c = {{11,22,33},{44,66,77},{88,3,1}};
+        for (int i = 0; i < c.length; i++) {
+            int totalScore = 0;
+            for (int j = 0; j < c[i].length; j++) {
+                totalScore += c[i][j];
+            }
+            System.out.println("第" + (i +1) + "个班级的平均成绩为：" + totalScore/c[i].length) ;
+        }
+    }
+    /*
+    * 找出一列数中的最大的数
+    * */
+    @Test
+    public void testFn7(){
+        int [] arr = {1,2,3,7,99,2};
+        int maxValue = arr[0];
+        for (int x: arr
+             ) {
+            if(x > maxValue){
+                maxValue = x;
+            }
+        }
+        System.out.println(maxValue);
+    }
+    /*
+    * 冒泡排序
+    * */
+    @Test
+    public void testFn8(){
+        int [] arr = {77,22,33,44,21,32,88};
+        for (int i = 0; i < arr.length-1; i++) {//计循环“次数”
+            for (int j = 0; j < arr.length -i -1; j++) {//计交换“动作”
+                if(arr[j] > arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1] ;
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        //完成冒泡排序，打印arr。
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]+",");
+        }
+    }
+    /*
+    选择排序
+    */
+    @Test
+    public void testFn9(){
+        int [] arr = {87,22,33,44,55,66,77,88,99,101};
+        for (int i = 0; i < arr.length; i++) {
+            //找到最大的下标
+            int maxIndex = i;
+            for (int j = i+1; j < arr.length; j++) {
+                if(arr[maxIndex] < arr[j]){
+                    maxIndex = j;
+                }
+            }
+            //换
+            int temp = arr[i];
+            arr[i] = arr[maxIndex];
+            arr[maxIndex] = temp;
+            System.out.println(Arrays.toString(arr));
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]+",");
+        }
     }
 
 }
