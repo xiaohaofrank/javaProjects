@@ -118,4 +118,43 @@ public class programExample {
         else
             return "未中奖";
     }
+
+    @Test
+    public void testFn2(){
+        /*
+        * 实例
+        * */
+        Dog hsq = new Dog();
+        hsq.name = "哈士奇";
+        hsq.age = 2;
+        hsq.color = "黑白相间";
+        hsq.eat();
+
+        Dog td = new Dog();
+        td.name = "泰迪";
+        td.age = 2;
+        td.color = "棕色";
+        td.eat();
+
+        new Dog().move();//实例化一个对象，匿名对象
+        Dog dog2 = null;//
+        dog2.eat();//java.lang.NullPointerException
+    }
+}
+/*
+* 面向对象
+* 类
+* */
+
+class Dog{
+    String name;
+    int age;
+    String color;
+
+    public void eat(){
+        System.out.println(color + "的" + name + "在吃...");
+    }
+    public void move(){
+        System.out.println(color + "的" + name + "在逛公园...");
+    }
 }
