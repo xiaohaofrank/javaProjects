@@ -136,16 +136,70 @@ public class programExample {
         td.color = "棕色";
         td.eat();
 
-        new Dog().move();//实例化一个对象，匿名对象
-        Dog dog2 = null;//
-        dog2.eat();//java.lang.NullPointerException
+        new Dog().move();//实例化一个对象，匿名对象//null的null在逛公园...
+//        Dog dog2 = null;//
+//        dog2.eat();//java.lang.NullPointerException
+        td = hsq;//对象之间的赋值
+        td.name = "嘿嘿";
+        System.out.println(hsq.name);
+        method(hsq);
+        System.out.println(hsq.name);
+        //
+        Horse horse = new Horse();
+        horse.setName("小白马");
+        System.out.println(horse);
+
+    }
+
+    /*
+    * @参数 对象Dog
+    * */
+    private void method(Dog dog) {
+        dog.name = "白白";
+    }
+}
+
+class Horse{
+    private String name;
+    private int age;
+    private String color;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Horse{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", color='" + color + '\'' +
+                '}';
     }
 }
 /*
 * 面向对象
 * 类
 * */
-
 class Dog{
     String name;
     int age;
