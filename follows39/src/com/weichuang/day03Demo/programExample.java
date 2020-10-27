@@ -144,10 +144,7 @@ public class programExample {
         System.out.println(hsq.name);
         method(hsq);
         System.out.println(hsq.name);
-        //
-        Horse horse = new Horse();
-        horse.setName("小白马");
-        System.out.println(horse);
+
 
     }
 
@@ -157,12 +154,40 @@ public class programExample {
     private void method(Dog dog) {
         dog.name = "白白";
     }
+    /*
+    *
+    *
+    * */
+    @Test
+    public void testFn3(){
+        //
+        Horse horse = new Horse();
+        horse.setName("小白马");
+        System.out.println(horse);
+        Horse horse1 = new Horse("小角角",18,"蓝白相间");
+        System.out.println(horse1);
+    }
 }
 
 class Horse{
     private String name;
     private int age;
     private String color;
+    //默认构造方法或无参构造方法
+    public Horse(){
+        System.out.println("无参构造方法");
+    }
+    /*
+    * @param name
+    * @param color
+    * 这个构造方法互称为构造方法重载
+    * */
+    public Horse(String name,int age,String color){
+//        System.out.println("名字："+name +",年龄："+age+",颜色："+color);
+        this.name = name;
+        this.color = color;
+    }
+
     public String getName() {
         return name;
     }
