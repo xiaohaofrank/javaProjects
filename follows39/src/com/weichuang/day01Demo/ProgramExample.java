@@ -133,7 +133,7 @@ public class ProgramExample {
     */
     @Test
     public void testFn7() {
-        final int a = 3;//因为final修饰的为不可变量
+        final int a = 3;//因为final修饰的为不可变量.
         switch(a){
             case 1:
                 System.out.println(1);
