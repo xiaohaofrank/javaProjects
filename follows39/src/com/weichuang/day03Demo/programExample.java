@@ -167,11 +167,42 @@ public class programExample {
         Horse horse1 = new Horse("小角角",18,"蓝白相间");
         System.out.println(horse1);
     }
+    /*
+    * 值传递和引用传递
+    * */
+    @Test
+    public void testFn4(){
+        int x = 10;
+        method(x);
+        System.out.println(x);//10 两个局部变量的栈内存互不影响
+
+        Horse horse = new Horse();
+        method(horse);
+        System.out.println(horse.age);//18 管用
+
+        String name = "小飞";
+        method(name);
+        System.out.println(name);//小飞 两个局部变量的堆内存互不影响
+    }
+    public void method(String name){
+        name = "小贝";
+    }
+    public void method(Horse horse){
+        horse.age = 18;
+    }
+    private void method(int x) {
+        x = 20;
+    }
+
+    @Test
+    public void testFn5(){
+
+    }
 }
 
 class Horse{
-    private String name;
-    private int age;
+    private String name;//private不允许方法改动此参数
+    public int age = 5;//public允许方法改动此参数
     private String color;
     //默认构造方法或无参构造方法
     public Horse(){
@@ -186,6 +217,11 @@ class Horse{
 //        System.out.println("名字："+name +",年龄："+age+",颜色："+color);
         this.name = name;
         this.color = color;
+        this.method();
+    }
+
+    private void method() {
+        System.out.println("这是一个普通方法。");
     }
 
     public String getName() {
@@ -236,4 +272,12 @@ class Dog{
     public void move(){
         System.out.println(color + "的" + name + "在逛公园...");
     }
+}
+
+/*
+* 对象的一对一关系
+*
+* */
+class Hero{
+
 }
